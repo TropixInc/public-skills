@@ -1,3 +1,15 @@
+---
+id: CHECKOUT_SKILL_INDEX
+title: "Checkout Skill Index"
+module: checkout
+module_version: "1.0.0"
+type: index
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+---
+
 # Checkout Skill Index
 
 Índice master de toda a documentação de checkout do W3block. Use este documento como ponto de entrada para implementar qualquer parte do fluxo de checkout.
@@ -6,18 +18,18 @@
 
 ## Documentos
 
-| # | Documento | Descrição | Status | Quando usar |
-|---|-----------|-----------|--------|-------------|
-| 1 | [CHECKOUT_API_REFERENCE.md](./CHECKOUT_API_REFERENCE.md) | Endpoints, schemas JSON, enums, erros, constantes | ✅ Referência | Consulta de API em qualquer momento |
-| 2 | [FLOW_CHECKOUT_OVERVIEW.md](./FLOW_CHECKOUT_OVERVIEW.md) | Visão geral do fluxo em 3 passos, arquitetura Next.js | ✅ Atualizado | Entender a arquitetura antes de implementar |
-| 3 | [FLOW_CHECKOUT_CART_CONFIRMATION.md](./FLOW_CHECKOUT_CART_CONFIRMATION.md) | Step 1: Carrinho, preview, seleção de método, cupom | ✅ Implementado | Implementar tela de confirmação |
-| 4 | [FLOW_CHECKOUT_PAYMENT_CREDIT_CARD.md](./FLOW_CHECKOUT_PAYMENT_CREDIT_CARD.md) | Cartão de crédito via Asaas/Pagar.me | ✅ Implementado | Checkout transparente com cartão |
-| 5 | [FLOW_CHECKOUT_PAYMENT_PIX.md](./FLOW_CHECKOUT_PAYMENT_PIX.md) | PIX com QR code (Asaas) + iframe (Pagar.me) | ✅ Implementado | Pagamento PIX com polling |
-| 6 | [FLOW_CHECKOUT_PAYMENT_STRIPE.md](./FLOW_CHECKOUT_PAYMENT_STRIPE.md) | Stripe: Elements (credit_card) + iframe (PIX) | ✅ Implementado | Pagamento via Stripe |
-| 7 | [FLOW_CHECKOUT_PAYMENT_CRYPTO.md](./FLOW_CHECKOUT_PAYMENT_CRYPTO.md) | Braza (fiat-to-crypto) + ERC-20 com allowance | ✅ Implementado | Crypto nativo ou bridge |
-| 8 | [FLOW_CHECKOUT_PAYMENT_TRANSFER.md](./FLOW_CHECKOUT_PAYMENT_TRANSFER.md) | Transferência bancária / pedidos gratuitos | ✅ Implementado | Pagamento manual ou free |
-| 9 | [FLOW_CHECKOUT_COMPLETION.md](./FLOW_CHECKOUT_COMPLETION.md) | Step 3: Status, polling, resumo de compra | ✅ Implementado | Tela de conclusão |
-| 10 | [FLOW_MY_ORDERS.md](./FLOW_MY_ORDERS.md) | Lista de pedidos do usuário com status e detalhes | ✅ Implementado | Tela "Minhas Compras" |
+| # | Documento | Versão | Descrição | Status | Quando usar |
+|---|-----------|--------|-----------|--------|-------------|
+| 1 | [CHECKOUT_API_REFERENCE.md](./CHECKOUT_API_REFERENCE.md) | 1.0.0 | Endpoints, schemas JSON, enums, erros, constantes | ✅ Referência | Consulta de API em qualquer momento |
+| 2 | [FLOW_CHECKOUT_OVERVIEW.md](./FLOW_CHECKOUT_OVERVIEW.md) | 1.0.0 | Visão geral do fluxo em 3 passos, arquitetura Next.js | ✅ Atualizado | Entender a arquitetura antes de implementar |
+| 3 | [FLOW_CHECKOUT_CART_CONFIRMATION.md](./FLOW_CHECKOUT_CART_CONFIRMATION.md) | 1.0.0 | Step 1: Carrinho, preview, seleção de método, cupom | ✅ Implementado | Implementar tela de confirmação |
+| 4 | [FLOW_CHECKOUT_PAYMENT_CREDIT_CARD.md](./FLOW_CHECKOUT_PAYMENT_CREDIT_CARD.md) | 1.0.0 | Cartão de crédito via Asaas/Pagar.me | ✅ Implementado | Checkout transparente com cartão |
+| 5 | [FLOW_CHECKOUT_PAYMENT_PIX.md](./FLOW_CHECKOUT_PAYMENT_PIX.md) | 1.0.0 | PIX com QR code (Asaas) + iframe (Pagar.me) | ✅ Implementado | Pagamento PIX com polling |
+| 6 | [FLOW_CHECKOUT_PAYMENT_STRIPE.md](./FLOW_CHECKOUT_PAYMENT_STRIPE.md) | 1.0.0 | Stripe: Elements (credit_card) + iframe (PIX) | ✅ Implementado | Pagamento via Stripe |
+| 7 | [FLOW_CHECKOUT_PAYMENT_CRYPTO.md](./FLOW_CHECKOUT_PAYMENT_CRYPTO.md) | 1.0.0 | Braza (fiat-to-crypto) + ERC-20 com allowance | ✅ Implementado | Crypto nativo ou bridge |
+| 8 | [FLOW_CHECKOUT_PAYMENT_TRANSFER.md](./FLOW_CHECKOUT_PAYMENT_TRANSFER.md) | 1.0.0 | Transferência bancária / pedidos gratuitos | ✅ Implementado | Pagamento manual ou free |
+| 9 | [FLOW_CHECKOUT_COMPLETION.md](./FLOW_CHECKOUT_COMPLETION.md) | 1.0.0 | Step 3: Status, polling, resumo de compra | ✅ Implementado | Tela de conclusão |
+| 10 | [FLOW_MY_ORDERS.md](./FLOW_MY_ORDERS.md) | 1.0.0 | Lista de pedidos do usuário com status e detalhes | ✅ Implementado | Tela "Minhas Compras" |
 
 ---
 

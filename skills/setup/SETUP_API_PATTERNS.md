@@ -1,3 +1,18 @@
+---
+id: SETUP_API_PATTERNS
+title: "Setup - Padroes de API"
+module: setup
+version: "1.0.0"
+type: setup
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - setup
+  - api-patterns
+---
+
 # Setup API Patterns
 
 Padroes de comunicacao com a API W3block. Este documento cobre como o SDK faz chamadas HTTP, gerencia autenticacao e trata erros.

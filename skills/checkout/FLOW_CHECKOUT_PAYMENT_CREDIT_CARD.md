@@ -1,3 +1,22 @@
+---
+id: FLOW_CHECKOUT_PAYMENT_CREDIT_CARD
+title: "Checkout - Pagamento Cartao de Credito"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - payment
+  - credit-card
+depends_on:
+  - FLOW_CHECKOUT_OVERVIEW
+  - CHECKOUT_API_REFERENCE
+---
+
 # Pagamento com Cartão de Crédito (Pagar.me / Asaas)
 
 ## Overview

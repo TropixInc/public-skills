@@ -1,3 +1,21 @@
+---
+id: FLOW_CHECKOUT_COMPLETION
+title: "Checkout - Conclusao"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - completion
+depends_on:
+  - FLOW_CHECKOUT_OVERVIEW
+  - CHECKOUT_API_REFERENCE
+---
+
 # Step 3: Tela de Conclusão (Completion)
 
 ## Overview

@@ -1,3 +1,18 @@
+---
+id: USER_PROFILE_API_REFERENCE
+title: "User Profile - API Reference"
+module: user-profile
+version: "1.0.0"
+type: api-reference
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - api
+  - user-profile
+---
+
 # User Profile API Reference (KEY API Only)
 
 Referencia dos endpoints de **withdrawals** (saques) que utilizam a KEY API (`https://api.w3block.io`).

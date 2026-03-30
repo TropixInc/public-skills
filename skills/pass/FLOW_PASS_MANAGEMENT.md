@@ -1,3 +1,22 @@
+---
+id: FLOW_PASS_MANAGEMENT
+title: "Pass - Gerenciamento"
+module: pass
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - pass
+  - management
+  - crud
+depends_on:
+  - FLOW_PASS_OVERVIEW
+  - PASS_API_REFERENCE
+---
+
 # Gerenciamento de Passes e Benefícios (Admin)
 
 ## Overview

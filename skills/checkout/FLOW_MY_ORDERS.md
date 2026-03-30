@@ -1,3 +1,20 @@
+---
+id: FLOW_MY_ORDERS
+title: "Checkout - Meus Pedidos"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - orders
+depends_on:
+  - CHECKOUT_API_REFERENCE
+---
+
 # Tela: Minhas Compras (My Orders)
 
 ## Overview

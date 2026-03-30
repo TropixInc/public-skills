@@ -1,3 +1,20 @@
+---
+id: FLOW_TOKENS_METADATA
+title: "Tokens - Metadados"
+module: tokens
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - tokens
+  - metadata
+depends_on:
+  - TOKENS_API_REFERENCE
+---
+
 # Flow: Metadados de Tokens
 
 Fluxo para consultar metadados de tokens/NFTs por diferentes identificadores: RFID, endereco de contrato + tokenId, ou por colecao.

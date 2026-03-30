@@ -1,3 +1,22 @@
+---
+id: FLOW_PASS_BENEFIT_VERIFICATION
+title: "Pass - Verificacao de Beneficios"
+module: pass
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - pass
+  - benefits
+  - verification
+depends_on:
+  - FLOW_PASS_OVERVIEW
+  - PASS_API_REFERENCE
+---
+
 # Verificacao e Registro de Uso de Beneficio (Operador)
 
 ## Overview

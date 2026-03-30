@@ -1,3 +1,15 @@
+---
+id: TOKENS_SKILL_INDEX
+title: "Tokens Skill Index"
+module: tokens
+module_version: "1.0.0"
+type: index
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+---
+
 # Tokens Skill Index
 
 Indice master de toda a documentacao do modulo Tokens/NFT do W3block. Use este documento como ponto de entrada para implementar qualquer funcionalidade de tokens, NFTs, transferencias, saldo blockchain e WalletConnect.
@@ -23,14 +35,14 @@ Se voce esta implementando pela primeira vez, siga estes passos:
 
 ## Documentos
 
-| # | Documento | Descricao | Status | Quando usar |
-|---|-----------|-----------|--------|-------------|
-| 1 | [TOKENS_API_REFERENCE.md](./TOKENS_API_REFERENCE.md) | Endpoints, schemas JSON, enums, interfaces TypeScript, erros | Referencia | Consulta de API em qualquer momento |
-| 2 | [FLOW_TOKENS_NFT_WALLET.md](./FLOW_TOKENS_NFT_WALLET.md) | Listar NFTs da wallet do usuario autenticado | Implementado | Exibir colecao de NFTs do usuario |
-| 3 | [FLOW_TOKENS_METADATA.md](./FLOW_TOKENS_METADATA.md) | Consultar metadados de tokens por RFID, contrato ou colecao | Implementado | Exibir detalhes de um token/NFT |
-| 4 | [FLOW_TOKENS_TRANSFER.md](./FLOW_TOKENS_TRANSFER.md) | Transferir NFTs e ERC-20 (por address, email, entre usuarios) | Implementado | Transferencia de tokens |
-| 5 | [FLOW_TOKENS_BALANCE.md](./FLOW_TOKENS_BALANCE.md) | Consultar saldo blockchain (ETH, MATIC) de uma wallet | Implementado | Exibir saldo nativo da wallet |
-| 6 | [FLOW_TOKENS_WALLET_CONNECT.md](./FLOW_TOKENS_WALLET_CONNECT.md) | Conectar wallet externa via WalletConnect (ID API) | Implementado | Integrar wallet externa |
+| # | Documento | Versão | Descricao | Status | Quando usar |
+|---|-----------|--------|-----------|--------|-------------|
+| 1 | [TOKENS_API_REFERENCE.md](./TOKENS_API_REFERENCE.md) | 1.0.0 | Endpoints, schemas JSON, enums, interfaces TypeScript, erros | Referencia | Consulta de API em qualquer momento |
+| 2 | [FLOW_TOKENS_NFT_WALLET.md](./FLOW_TOKENS_NFT_WALLET.md) | 1.0.0 | Listar NFTs da wallet do usuario autenticado | Implementado | Exibir colecao de NFTs do usuario |
+| 3 | [FLOW_TOKENS_METADATA.md](./FLOW_TOKENS_METADATA.md) | 1.0.0 | Consultar metadados de tokens por RFID, contrato ou colecao | Implementado | Exibir detalhes de um token/NFT |
+| 4 | [FLOW_TOKENS_TRANSFER.md](./FLOW_TOKENS_TRANSFER.md) | 1.0.0 | Transferir NFTs e ERC-20 (por address, email, entre usuarios) | Implementado | Transferencia de tokens |
+| 5 | [FLOW_TOKENS_BALANCE.md](./FLOW_TOKENS_BALANCE.md) | 1.0.0 | Consultar saldo blockchain (ETH, MATIC) de uma wallet | Implementado | Exibir saldo nativo da wallet |
+| 6 | [FLOW_TOKENS_WALLET_CONNECT.md](./FLOW_TOKENS_WALLET_CONNECT.md) | 1.0.0 | Conectar wallet externa via WalletConnect (ID API) | Implementado | Integrar wallet externa |
 
 ---
 

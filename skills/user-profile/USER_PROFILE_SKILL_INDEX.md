@@ -1,3 +1,15 @@
+---
+id: USER_PROFILE_SKILL_INDEX
+title: "User Profile Skill Index (KEY API)"
+module: user-profile
+module_version: "1.0.0"
+type: index
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+---
+
 # User Profile Skill Index (KEY API)
 
 Indice do dominio de perfil de usuario que utiliza a KEY API (`https://api.w3block.io`). Este skill cobre exclusivamente as operacoes de **saque (withdrawals)** — que sao os unicos endpoints de user-profile na KEY API.
@@ -10,10 +22,10 @@ Indice do dominio de perfil de usuario que utiliza a KEY API (`https://api.w3blo
 
 ## Documentos
 
-| # | Documento | Descricao | Status | Quando usar |
-|---|-----------|-----------|--------|-------------|
-| 1 | [USER_PROFILE_API_REFERENCE.md](./USER_PROFILE_API_REFERENCE.md) | Endpoints KEY API de withdrawals, schemas, enums, erros | Referencia | Consulta de API de saques |
-| 2 | [FLOW_PROFILE_WITHDRAWALS.md](./FLOW_PROFILE_WITHDRAWALS.md) | Saques: solicitacao, fluxo admin (escrow/concluir/recusar) | Implementado | Gerenciamento de saques |
+| # | Documento | Versão | Descricao | Status | Quando usar |
+|---|-----------|--------|-----------|--------|-------------|
+| 1 | [USER_PROFILE_API_REFERENCE.md](./USER_PROFILE_API_REFERENCE.md) | 1.0.0 | Endpoints KEY API de withdrawals, schemas, enums, erros | Referencia | Consulta de API de saques |
+| 2 | [FLOW_PROFILE_WITHDRAWALS.md](./FLOW_PROFILE_WITHDRAWALS.md) | 1.0.0 | Saques: solicitacao, fluxo admin (escrow/concluir/recusar) | Implementado | Gerenciamento de saques |
 
 ---
 

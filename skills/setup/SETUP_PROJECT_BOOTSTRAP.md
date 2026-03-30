@@ -1,3 +1,18 @@
+---
+id: SETUP_PROJECT_BOOTSTRAP
+title: "Setup - Bootstrap de Projeto"
+module: setup
+version: "1.0.0"
+type: setup
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - setup
+  - bootstrap
+---
+
 # Setup Project Bootstrap
 
 Como configurar um projeto Next.js 15 para consumir a plataforma W3block usando o SDK (`@w3block/w3block-ui-sdk`) e NextAuth.

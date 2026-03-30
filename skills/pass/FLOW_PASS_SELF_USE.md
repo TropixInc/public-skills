@@ -1,3 +1,21 @@
+---
+id: FLOW_PASS_SELF_USE
+title: "Pass - Uso Proprio"
+module: pass
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - pass
+  - self-use
+depends_on:
+  - FLOW_PASS_OVERVIEW
+  - PASS_API_REFERENCE
+---
+
 # Self-Use de Benefício (Usuário)
 
 ## Overview

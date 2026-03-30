@@ -1,3 +1,22 @@
+---
+id: FLOW_CHECKOUT_PAYMENT_CRYPTO
+title: "Checkout - Pagamento Crypto"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - payment
+  - crypto
+depends_on:
+  - FLOW_CHECKOUT_OVERVIEW
+  - CHECKOUT_API_REFERENCE
+---
+
 # Pagamento Crypto (Braza / ERC-20)
 
 ## Overview

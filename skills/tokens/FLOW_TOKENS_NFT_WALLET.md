@@ -1,3 +1,21 @@
+---
+id: FLOW_TOKENS_NFT_WALLET
+title: "Tokens - NFT Wallet"
+module: tokens
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - tokens
+  - nft
+  - wallet
+depends_on:
+  - TOKENS_API_REFERENCE
+---
+
 # Flow: NFTs por Wallet
 
 Fluxo para listar todos os NFTs de uma wallet do usuario autenticado, filtrados por blockchain e mintados pelo W3block.

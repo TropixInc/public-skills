@@ -1,3 +1,20 @@
+---
+id: FLOW_TOKENS_TRANSFER
+title: "Tokens - Transferencia"
+module: tokens
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - tokens
+  - transfer
+depends_on:
+  - TOKENS_API_REFERENCE
+---
+
 # Flow: Transferencia de Tokens
 
 Fluxo para transferir NFTs e tokens ERC-20 entre usuarios, incluindo transferencia por endereco de wallet, por email e consulta de status da transferencia.

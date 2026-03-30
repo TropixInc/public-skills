@@ -1,3 +1,18 @@
+---
+id: PASS_API_REFERENCE
+title: "Pass - API Reference"
+module: pass
+version: "1.0.0"
+type: api-reference
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - api
+  - pass
+---
+
 # Pass API Reference
 
 Referência consolidada de todos os endpoints, schemas, enums e erros do módulo Pass W3block.

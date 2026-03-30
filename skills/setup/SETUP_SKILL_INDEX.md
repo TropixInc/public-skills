@@ -1,3 +1,15 @@
+---
+id: SETUP_SKILL_INDEX
+title: "Setup Skill Index"
+module: setup
+module_version: "1.0.0"
+type: index
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+---
+
 # Setup Skill Index
 
 Skill de fundacao da plataforma W3block. Use este documento PRIMEIRO antes de qualquer outro skill da KEY API (`https://api.w3block.io`) — tokens, loyalty, withdrawals.
@@ -8,10 +20,10 @@ Skill de fundacao da plataforma W3block. Use este documento PRIMEIRO antes de qu
 
 ## Documentos
 
-| # | Documento | Descricao | Status | Quando usar |
-|---|-----------|-----------|--------|-------------|
-| 1 | [SETUP_PROJECT_BOOTSTRAP.md](./SETUP_PROJECT_BOOTSTRAP.md) | Instalacao, .env, provider tree, NextAuth, QueryClient | ✅ Referencia | Configurar um projeto do zero ou validar setup existente |
-| 2 | [SETUP_API_PATTERNS.md](./SETUP_API_PATTERNS.md) | useAxios, usePrivateQuery, usePublicQuery, useMutation, error handling, JWT | ✅ Referencia | Entender como fazer chamadas API em qualquer modulo |
+| # | Documento | Versão | Descricao | Status | Quando usar |
+|---|-----------|--------|-----------|--------|-------------|
+| 1 | [SETUP_PROJECT_BOOTSTRAP.md](./SETUP_PROJECT_BOOTSTRAP.md) | 1.0.0 | Instalacao, .env, provider tree, NextAuth, QueryClient | ✅ Referencia | Configurar um projeto do zero ou validar setup existente |
+| 2 | [SETUP_API_PATTERNS.md](./SETUP_API_PATTERNS.md) | 1.0.0 | useAxios, usePrivateQuery, usePublicQuery, useMutation, error handling, JWT | ✅ Referencia | Entender como fazer chamadas API em qualquer modulo |
 
 ---
 

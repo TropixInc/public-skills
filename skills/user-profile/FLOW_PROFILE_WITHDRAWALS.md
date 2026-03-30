@@ -1,3 +1,20 @@
+---
+id: FLOW_PROFILE_WITHDRAWALS
+title: "User Profile - Saques"
+module: user-profile
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - user-profile
+  - withdrawals
+depends_on:
+  - USER_PROFILE_API_REFERENCE
+---
+
 # Flow: Saques (Withdrawals)
 
 Fluxo completo de saques, incluindo gerenciamento de metodos de saque (usuario), solicitacao de saque e acoes administrativas (escrow, conclusao, recusa).

@@ -1,3 +1,18 @@
+---
+id: TOKENS_API_REFERENCE
+title: "Tokens - API Reference"
+module: tokens
+version: "1.0.0"
+type: api-reference
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - api
+  - tokens
+---
+
 # Tokens API Reference
 
 Referencia consolidada de todos os endpoints, schemas, enums e interfaces TypeScript do modulo de Tokens/NFT W3block.

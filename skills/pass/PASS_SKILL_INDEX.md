@@ -1,3 +1,15 @@
+---
+id: PASS_SKILL_INDEX
+title: "Pass Skill Index"
+module: pass
+module_version: "1.0.0"
+type: index
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+---
+
 # Pass Skill Index
 
 Índice master de toda a documentação do módulo Pass do W3block. Use este documento como ponto de entrada para implementar qualquer funcionalidade de token passes e benefícios.
@@ -23,16 +35,16 @@ Se você está implementando pela primeira vez, siga estes passos:
 
 ## Documentos
 
-| # | Documento | Descrição | Status | Quando usar |
-|---|-----------|-----------|--------|-------------|
-| 1 | [PASS_API_REFERENCE.md](./PASS_API_REFERENCE.md) | Endpoints, schemas JSON, enums, erros, constantes | ✅ Referência | Consulta de API em qualquer momento |
-| 2 | [FLOW_PASS_OVERVIEW.md](./FLOW_PASS_OVERVIEW.md) | Visão geral, personas, arquitetura, componentes SDK | ✅ Atualizado | Entender o módulo antes de implementar |
-| 3 | [FLOW_PASS_MANAGEMENT.md](./FLOW_PASS_MANAGEMENT.md) | CRUD: criar pass, benefícios, endereços, operadores | ✅ Implementado | Setup inicial como admin |
-| 4 | [FLOW_PASS_BENEFIT_VERIFICATION.md](./FLOW_PASS_BENEFIT_VERIFICATION.md) | Scan QR → verificar → registrar uso | ✅ Implementado | Operador verificando benefício |
-| 5 | [FLOW_PASS_BENEFITS_VIEW.md](./FLOW_PASS_BENEFITS_VIEW.md) | Listar e visualizar benefícios (operador + usuário) | ✅ Implementado | Ver benefícios de um pass/token |
-| 6 | [FLOW_PASS_SELF_USE.md](./FLOW_PASS_SELF_USE.md) | Usuário registra uso próprio de benefício | ✅ Implementado | Self-use (allowSelfUse: true) |
-| 7 | [FLOW_PASS_SHARE.md](./FLOW_PASS_SHARE.md) | Gift card: gerar, compartilhar, acessar | ✅ Implementado | Compartilhar pass como presente |
-| 8 | [FLOW_PASS_BENEFIT_TRACKING.md](./FLOW_PASS_BENEFIT_TRACKING.md) | Histórico de uso + exportação XLS | ✅ Implementado | Rastrear quem usou o quê |
+| # | Documento | Versão | Descrição | Status | Quando usar |
+|---|-----------|--------|-----------|--------|-------------|
+| 1 | [PASS_API_REFERENCE.md](./PASS_API_REFERENCE.md) | 1.0.0 | Endpoints, schemas JSON, enums, erros, constantes | ✅ Referência | Consulta de API em qualquer momento |
+| 2 | [FLOW_PASS_OVERVIEW.md](./FLOW_PASS_OVERVIEW.md) | 1.0.0 | Visão geral, personas, arquitetura, componentes SDK | ✅ Atualizado | Entender o módulo antes de implementar |
+| 3 | [FLOW_PASS_MANAGEMENT.md](./FLOW_PASS_MANAGEMENT.md) | 1.0.0 | CRUD: criar pass, benefícios, endereços, operadores | ✅ Implementado | Setup inicial como admin |
+| 4 | [FLOW_PASS_BENEFIT_VERIFICATION.md](./FLOW_PASS_BENEFIT_VERIFICATION.md) | 1.0.0 | Scan QR → verificar → registrar uso | ✅ Implementado | Operador verificando benefício |
+| 5 | [FLOW_PASS_BENEFITS_VIEW.md](./FLOW_PASS_BENEFITS_VIEW.md) | 1.0.0 | Listar e visualizar benefícios (operador + usuário) | ✅ Implementado | Ver benefícios de um pass/token |
+| 6 | [FLOW_PASS_SELF_USE.md](./FLOW_PASS_SELF_USE.md) | 1.0.0 | Usuário registra uso próprio de benefício | ✅ Implementado | Self-use (allowSelfUse: true) |
+| 7 | [FLOW_PASS_SHARE.md](./FLOW_PASS_SHARE.md) | 1.0.0 | Gift card: gerar, compartilhar, acessar | ✅ Implementado | Compartilhar pass como presente |
+| 8 | [FLOW_PASS_BENEFIT_TRACKING.md](./FLOW_PASS_BENEFIT_TRACKING.md) | 1.0.0 | Histórico de uso + exportação XLS | ✅ Implementado | Rastrear quem usou o quê |
 
 ---
 

@@ -1,3 +1,20 @@
+---
+id: FLOW_TOKENS_WALLET_CONNECT
+title: "Tokens - Wallet Connect"
+module: tokens
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - tokens
+  - wallet-connect
+depends_on:
+  - TOKENS_API_REFERENCE
+---
+
 # Flow: WalletConnect
 
 Fluxo para conectar uma wallet externa via protocolo WalletConnect, permitindo que o usuario interaja com a plataforma usando wallets como MetaMask, Trust Wallet, etc.

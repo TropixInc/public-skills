@@ -1,3 +1,20 @@
+---
+id: FLOW_TOKENS_BALANCE
+title: "Tokens - Consulta de Saldo"
+module: tokens
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-30"
+authors:
+  - fernandodevpascoal
+tags:
+  - tokens
+  - balance
+depends_on:
+  - TOKENS_API_REFERENCE
+---
+
 # Flow: Saldo Blockchain
 
 Fluxo para consultar o saldo nativo (ETH, MATIC) de uma wallet em uma blockchain especifica, incluindo consulta individual e consulta em lote para multiplas wallets.
