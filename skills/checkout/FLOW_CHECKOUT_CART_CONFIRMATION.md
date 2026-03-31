@@ -1,3 +1,21 @@
+---
+id: FLOW_CHECKOUT_CART_CONFIRMATION
+title: "Checkout - Confirmacao de Carrinho"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - cart
+depends_on:
+  - FLOW_CHECKOUT_OVERVIEW
+  - CHECKOUT_API_REFERENCE
+---
+
 # Step 1: Confirmação do Carrinho (Cart Confirmation)
 
 ## Overview

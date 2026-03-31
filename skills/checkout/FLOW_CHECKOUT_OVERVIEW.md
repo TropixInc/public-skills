@@ -1,3 +1,20 @@
+---
+id: FLOW_CHECKOUT_OVERVIEW
+title: "Checkout - Visao Geral"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - overview
+depends_on:
+  - CHECKOUT_API_REFERENCE
+---
+
 # Checkout Flow — Visão Geral
 
 ## Overview

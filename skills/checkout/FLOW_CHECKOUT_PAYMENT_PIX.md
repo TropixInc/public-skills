@@ -1,3 +1,22 @@
+---
+id: FLOW_CHECKOUT_PAYMENT_PIX
+title: "Checkout - Pagamento PIX"
+module: checkout
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - checkout
+  - payment
+  - pix
+depends_on:
+  - FLOW_CHECKOUT_OVERVIEW
+  - CHECKOUT_API_REFERENCE
+---
+
 # Pagamento via PIX
 
 ## Overview

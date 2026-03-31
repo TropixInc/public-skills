@@ -1,3 +1,19 @@
+---
+id: CHECKOUT_API_REFERENCE
+title: "Checkout - API Reference"
+module: checkout
+version: "1.0.0"
+type: api-reference
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+tags:
+  - api
+  - checkout
+depends_on: []
+---
+
 # Checkout API Reference
 
 Referência consolidada de todos os endpoints, schemas, enums e erros do módulo de checkout W3block.

@@ -1,3 +1,15 @@
+---
+id: FLOW_SIGNUP
+title: "Auth - Fluxo de Signup"
+module: auth
+version: "1.0.0"
+type: flow
+status: implemented
+last_updated: "2026-03-24"
+authors:
+  - rafaelmhp
+---
+
 # Sign Up / Sign In / Reset Password Flow
 
 ## Overview
