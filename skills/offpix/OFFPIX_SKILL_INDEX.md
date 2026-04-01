@@ -30,6 +30,8 @@ Master index for all Offpix backend API documentation. These documents are aimed
 | 5 | [Contracts & Tokens](./contracts/CONTRACTS_SKILL_INDEX.md) | 1.0.0 | 6 | Implemented | NFT contracts, collections, editions, ERC20, royalty, gas, RFID, XLSX |
 | 6 | [Loyalty](./loyalty/LOYALTY_SKILL_INDEX.md) | 1.0.0 | 4 | Implemented | ERC20 contracts, loyalty programs, rewards, cashback, payments, staking |
 | 7 | [Whitelist](./whitelist/WHITELIST_SKILL_INDEX.md) | 1.0.0 | 3 | Implemented | Whitelists (user groups), entries, access check, on-chain promotion |
+| 8 | [Pass & Benefits](./pass/PASS_SKILL_INDEX.md) | 1.0.0 | 3 | Implemented | Token passes, digital/physical benefits, QR check-in, operators, share codes |
+| 9 | [Settings & Billing](./settings/SETTINGS_SKILL_INDEX.md) | 1.0.0 | 4 | Implemented | Plans, credit card, billing cycles, usage, feature-gating, tenant config |
 
 ---
 
@@ -65,11 +67,11 @@ Master index for all Offpix backend API documentation. These documents are aimed
 | ~~Configuration~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
 | ~~Tokens & NFTs~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** (in Contracts module) |
 | ~~Tokenization~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** (in Contracts module) |
-| Pass & Benefits | pass-backend | https://pass.w3block.io/docs | Medium |
+| ~~Pass & Benefits~~ | pass-backend | https://pass.w3block.io/docs | **Documented** |
 | ~~Loyalty~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** |
 | ~~Contacts~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
 | ~~KYC~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** (in Contacts module) |
-| Settings & Billing | pixwayid-backend | https://pixwayid.w3block.io/docs/ | Low |
+| ~~Settings & Billing~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
 | ~~Whitelist~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
 | PDF | w3block-pdf | https://pdf.w3block.io/docs | Low (internal only) |
 
@@ -115,6 +117,24 @@ Master index for all Offpix backend API documentation. These documents are aimed
 | 3 | [FLOW_LOYALTY_CONTRACT_SETUP](./loyalty/FLOW_LOYALTY_CONTRACT_SETUP.md) | Flow | Create ERC20 contract, deploy, create loyalty program, configure rules |
 | 4 | [FLOW_LOYALTY_BALANCE_OPERATIONS](./loyalty/FLOW_LOYALTY_BALANCE_OPERATIONS.md) | Flow | Mint, transfer, burn tokens; check balances and history |
 | 5 | [FLOW_LOYALTY_REWARDS_PAYMENTS](./loyalty/FLOW_LOYALTY_REWARDS_PAYMENTS.md) | Flow | Deposits, cashback, multilevel commissions, payments, staking, rollbacks |
+
+## Pass & Benefits Module Documents
+
+| # | Document | Type | Description |
+|---|----------|------|-------------|
+| 1 | [PASS_SKILL_INDEX](./pass/PASS_SKILL_INDEX.md) | Index | Entry point, decision table, endpoint matrix |
+| 2 | [PASS_API_REFERENCE](./pass/PASS_API_REFERENCE.md) | API Reference | All endpoints, DTOs, enums, error codes, check-in schemas |
+| 3 | [FLOW_PASS_LIFECYCLE](./pass/FLOW_PASS_LIFECYCLE.md) | Flow | Create pass, add benefits, check-in config, operators, share codes |
+| 4 | [FLOW_PASS_BENEFIT_REDEMPTION](./pass/FLOW_PASS_BENEFIT_REDEMPTION.md) | Flow | QR generation, 4 redemption methods, validation chain, usage tracking |
+
+## Settings & Billing Module Documents
+
+| # | Document | Type | Description |
+|---|----------|------|-------------|
+| 1 | [SETTINGS_SKILL_INDEX](./settings/SETTINGS_SKILL_INDEX.md) | Index | Entry point, decision table, endpoint matrix |
+| 2 | [SETTINGS_API_REFERENCE](./settings/SETTINGS_API_REFERENCE.md) | API Reference | All 16 endpoints, DTOs, enums, entity relationships |
+| 3 | [FLOW_SETTINGS_BILLING_MANAGEMENT](./settings/FLOW_SETTINGS_BILLING_MANAGEMENT.md) | Flow | Plan selection, credit card, billing cycles, usage, simulation, cancellation |
+| 4 | [FLOW_SETTINGS_TENANT_CONFIGURATION](./settings/FLOW_SETTINGS_TENANT_CONFIGURATION.md) | Flow | Tenant profile, auth providers, KYC, passwordless, email, feature checks |
 
 ## Whitelist Module Documents
 
