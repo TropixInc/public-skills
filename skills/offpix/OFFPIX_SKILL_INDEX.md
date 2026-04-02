@@ -5,7 +5,7 @@ module: offpix
 module_version: "1.0.0"
 type: index
 status: implemented
-last_updated: "2026-04-01"
+last_updated: "2026-04-02"
 authors:
   - rafaelmhp
 ---
@@ -32,6 +32,9 @@ Master index for all Offpix backend API documentation. These documents are aimed
 | 7 | [Whitelist](./whitelist/WHITELIST_SKILL_INDEX.md) | 1.0.0 | 3 | Implemented | Whitelists (user groups), entries, access check, on-chain promotion |
 | 8 | [Pass & Benefits](./pass/PASS_SKILL_INDEX.md) | 1.0.0 | 3 | Implemented | Token passes, digital/physical benefits, QR check-in, operators, share codes |
 | 9 | [Settings & Billing](./settings/SETTINGS_SKILL_INDEX.md) | 1.0.0 | 4 | Implemented | Plans, credit card, billing cycles, usage, feature-gating, tenant config |
+| 10 | [Tokenization](./tokenization/TOKENIZATION_SKILL_INDEX.md) | 1.0.0 | 5 | Implemented | Token collections, editions, mint, transfer, burn, RFID, XLSX import |
+| 11 | [KYC](./kyc/KYC_SKILL_INDEX.md) | 1.0.0 | 5 | Implemented | Document verification, submission, approval workflows, input types, config |
+| 12 | [PDF](./pdf/PDF_SKILL_INDEX.md) | 1.0.0 | 4 | Implemented | Certificate generation, pass/ticket PDFs, Handlebars templates (internal) |
 
 ---
 
@@ -61,19 +64,19 @@ Master index for all Offpix backend API documentation. These documents are aimed
 
 ## Available Domains (Not Yet Documented)
 
-| Domain | Backend Service | Swagger | Priority |
-|--------|----------------|---------|----------|
-| ~~Commerce~~ | commerce-backend | https://commerce.w3block.io/docs | **Documented** |
-| ~~Configuration~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
-| ~~Tokens & NFTs~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** (in Contracts module) |
-| ~~Tokenization~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** (in Contracts module) |
-| ~~Pass & Benefits~~ | pass-backend | https://pass.w3block.io/docs | **Documented** |
-| ~~Loyalty~~ | pixway-registry-backend | https://api.w3block.io/docs/ | **Documented** |
-| ~~Contacts~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
-| ~~KYC~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** (in Contacts module) |
-| ~~Settings & Billing~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
-| ~~Whitelist~~ | pixwayid-backend | https://pixwayid.w3block.io/docs/ | **Documented** |
-| PDF | w3block-pdf | https://pdf.w3block.io/docs | Low (internal only) |
+| Domain | Swagger | Status |
+|--------|---------|--------|
+| ~~Commerce~~ | https://commerce.w3block.io/docs | **Documented** |
+| ~~Configuration~~ | https://pixwayid.w3block.io/docs/ | **Documented** |
+| ~~Tokens & NFTs~~ | https://api.w3block.io/docs/ | **Documented** (in Contracts module) |
+| ~~Tokenization~~ | https://api.w3block.io/docs/ | **Documented** (dedicated module) |
+| ~~Pass & Benefits~~ | https://pass.w3block.io/docs | **Documented** |
+| ~~Loyalty~~ | https://api.w3block.io/docs/ | **Documented** |
+| ~~Contacts~~ | https://pixwayid.w3block.io/docs/ | **Documented** |
+| ~~KYC~~ | https://pixwayid.w3block.io/docs/ | **Documented** (dedicated module) |
+| ~~Settings & Billing~~ | https://pixwayid.w3block.io/docs/ | **Documented** |
+| ~~Whitelist~~ | https://pixwayid.w3block.io/docs/ | **Documented** |
+| ~~PDF~~ | https://pdf.w3block.io/docs | **Documented** (internal service) |
 
 ---
 
@@ -135,6 +138,35 @@ Master index for all Offpix backend API documentation. These documents are aimed
 | 2 | [SETTINGS_API_REFERENCE](./settings/SETTINGS_API_REFERENCE.md) | API Reference | All 16 endpoints, DTOs, enums, entity relationships |
 | 3 | [FLOW_SETTINGS_BILLING_MANAGEMENT](./settings/FLOW_SETTINGS_BILLING_MANAGEMENT.md) | Flow | Plan selection, credit card, billing cycles, usage, simulation, cancellation |
 | 4 | [FLOW_SETTINGS_TENANT_CONFIGURATION](./settings/FLOW_SETTINGS_TENANT_CONFIGURATION.md) | Flow | Tenant profile, auth providers, KYC, passwordless, email, feature checks |
+
+## Tokenization Module Documents
+
+| # | Document | Type | Description |
+|---|----------|------|-------------|
+| 1 | [TOKENIZATION_SKILL_INDEX](./tokenization/TOKENIZATION_SKILL_INDEX.md) | Index | Entry point, decision table, endpoint matrix |
+| 2 | [TOKENIZATION_API_REFERENCE](./tokenization/TOKENIZATION_API_REFERENCE.md) | API Reference | All endpoints, DTOs, enums, entity relationships |
+| 3 | [FLOW_TOKENIZATION_COLLECTION_LIFECYCLE](./tokenization/FLOW_TOKENIZATION_COLLECTION_LIFECYCLE.md) | Flow | Create draft, sync editions, configure, publish to blockchain |
+| 4 | [FLOW_TOKENIZATION_EDITION_OPERATIONS](./tokenization/FLOW_TOKENIZATION_EDITION_OPERATIONS.md) | Flow | Mint, transfer, burn, metadata update, RFID, gas estimation |
+| 5 | [FLOW_TOKENIZATION_BULK_IMPORT](./tokenization/FLOW_TOKENIZATION_BULK_IMPORT.md) | Flow | XLSX template export, bulk edition import, async job tracking |
+
+## KYC Module Documents
+
+| # | Document | Type | Description |
+|---|----------|------|-------------|
+| 1 | [KYC_SKILL_INDEX](./kyc/KYC_SKILL_INDEX.md) | Index | Entry point, decision table, endpoint matrix |
+| 2 | [KYC_API_REFERENCE](./kyc/KYC_API_REFERENCE.md) | API Reference | All endpoints, DTOs, enums, input types catalog |
+| 3 | [FLOW_KYC_SUBMISSION](./kyc/FLOW_KYC_SUBMISSION.md) | Flow | Fetch form, upload files, submit documents, multi-step, resubmission |
+| 4 | [FLOW_KYC_APPROVAL](./kyc/FLOW_KYC_APPROVAL.md) | Flow | List pending, review, approve/reject/require-review, audit trail |
+| 5 | [FLOW_KYC_CONFIGURATION](./kyc/FLOW_KYC_CONFIGURATION.md) | Flow | Tenant context setup, auto-approve, approver whitelists, notifications |
+
+## PDF Module Documents
+
+| # | Document | Type | Description |
+|---|----------|------|-------------|
+| 1 | [PDF_SKILL_INDEX](./pdf/PDF_SKILL_INDEX.md) | Index | Entry point, decision table, endpoint matrix |
+| 2 | [PDF_API_REFERENCE](./pdf/PDF_API_REFERENCE.md) | API Reference | All endpoints, DTOs, template syntax, configuration |
+| 3 | [FLOW_PDF_CERTIFICATE_GENERATION](./pdf/FLOW_PDF_CERTIFICATE_GENERATION.md) | Flow | Generate certificates from token metadata, preview, query-based lookup |
+| 4 | [FLOW_PDF_PASS_GENERATION](./pdf/FLOW_PDF_PASS_GENERATION.md) | Flow | Generate pass/ticket PDFs with benefits and QR codes |
 
 ## Whitelist Module Documents
 

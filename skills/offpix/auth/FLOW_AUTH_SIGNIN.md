@@ -28,7 +28,7 @@ W3Block supports 5 sign-in methods: password, OTP code, magic token, tenant API 
 |-------------|-------------|---------------|
 | User account | Registered user in a tenant | [Sign-Up flow](./FLOW_AUTH_SIGNUP.md) |
 | `tenantId` | UUID of the target tenant | Tenant lookup or environment config |
-| Base URL | Identity service URL | `https://pixwayid.w3block.io` (prod) or `https://pixwayid.stg.w3block.io` (staging) |
+| Base URL | Identity service URL | `https://pixwayid.w3block.io` (prod). A staging environment is also available — contact W3Block for details. |
 
 ## Entities & Relationships
 

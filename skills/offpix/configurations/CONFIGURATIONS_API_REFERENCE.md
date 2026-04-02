@@ -25,8 +25,9 @@ Complete endpoint reference for the W3Block Configurations module. This module s
 | Environment | URL |
 |-------------|-----|
 | Production | `https://pixwayid.w3block.io` |
-| Staging | `https://pixwayid.stg.w3block.io` |
 | Swagger | https://pixwayid.w3block.io/docs/ |
+
+> **Note:** A staging environment is also available for testing. Contact your W3Block representative for staging URLs.
 
 ## Authentication
 

@@ -43,32 +43,32 @@ This document defines the process for generating W3Block API documentation aimed
 
 ## 2. Source Material
 
-### 2.1 Backend Repositories (Primary Source)
+### 2.1 Backend Services (Primary Source)
 
-Use these to understand business logic, validations, entity relationships, and flows that the Swagger doesn't expose.
+Use the backend services to understand business logic, validations, entity relationships, and flows that the Swagger doesn't expose.
 
-| Service | Repository | Swagger | Framework |
-|---------|-----------|---------|-----------|
-| **ID** (Auth/Identity) | `../pixwayid-backend` | https://pixwayid.w3block.io/docs/ | NestJS + TypeORM |
-| **KEY** (Main API / Registry) | `../pixway-registry-backend` | https://api.w3block.io/docs/ | NestJS + TypeORM |
-| **Commerce** | `../commerce-backend` | https://commerce.w3block.io/docs | NestJS + TypeORM |
-| **Pass** | `../pass-backend` | https://pass.w3block.io/docs | NestJS + TypeORM |
-| **PDF** | `../w3block-pdf` | https://pdf.w3block.io/docs | NestJS + Puppeteer |
+| Service | Swagger | Framework |
+|---------|---------|-----------|
+| **ID** (Auth/Identity) | https://pixwayid.w3block.io/docs/ | NestJS + TypeORM |
+| **KEY** (Main API / Registry) | https://api.w3block.io/docs/ | NestJS + TypeORM |
+| **Commerce** | https://commerce.w3block.io/docs | NestJS + TypeORM |
+| **Pass** | https://pass.w3block.io/docs | NestJS + TypeORM |
+| **PDF** | https://pdf.w3block.io/docs | NestJS + Puppeteer |
 
-> **Note:** The PDF service is internal and not exposed to end users. However, its codebase can provide insights into document generation logic and template patterns.
+> **Note:** The PDF service is internal and not exposed to end users. However, its Swagger can provide insights into document generation logic and template patterns.
 
-**What to look for in backend repos:**
-- `src/modules/` — understand domain boundaries and entity relationships
-- `*.entity.ts` — data models, column types, relations, enums
-- `*.service.ts` — business logic, validations, side effects, event chains
-- `*.controller.ts` — endpoint signatures, guards, decorators, request/response DTOs
-- `*.dto.ts` — request/response shapes with validation decorators
-- `migrations/` — schema evolution, understand current state
-- `*.enum.ts` — status values, types, categories
+**What to look for in NestJS backend codebases:**
+- Module directories — understand domain boundaries and entity relationships
+- Entity files — data models, column types, relations, enums
+- Service files — business logic, validations, side effects, event chains
+- Controller files — endpoint signatures, guards, decorators, request/response DTOs
+- DTO files — request/response shapes with validation decorators
+- Migrations — schema evolution, understand current state
+- Enum files — status values, types, categories
 
 ### 2.2 Frontend Reference (Secondary Source — Names, Flows & Hierarchy)
 
-The Offpix frontend (`../offpix-frontend`) serves as a **reference implementation** — proof that API sequences work in production. Beyond tracing calls, it is a critical source for **naming and flow hierarchy**. API field names are often non-obvious or technical; the frontend uses user-friendly labels and a clear navigation hierarchy (what comes before what, parent-child relationships, step ordering) that should be reflected in the documentation. Use it to:
+The Offpix frontend serves as a **reference implementation** — proof that API sequences work in production. Beyond tracing calls, it is a critical source for **naming and flow hierarchy**. API field names are often non-obvious or technical; the frontend uses user-friendly labels and a clear navigation hierarchy (what comes before what, parent-child relationships, step ordering) that should be reflected in the documentation. Use it to:
 
 - **Adopt frontend naming** when documenting fields and concepts — if the frontend calls an API field by a different, clearer name, prefer the frontend name in documentation and note the API field name in parentheses
 - **Map flow hierarchy** — understand which screens/steps come before others, what the parent-child relationships are, and document flows in the same order the user experiences them
@@ -77,16 +77,16 @@ The Offpix frontend (`../offpix-frontend`) serves as a **reference implementatio
 - Understand which fields are actually required vs. optional in practice
 - Identify error handling patterns and edge cases
 
-**Key paths in the frontend:**
-- `src/key/shared/enums/ApiRoutes.ts` — all 170+ API route patterns
-- `src/key/shared/config/api.ts` — API client configuration
-- `src/key/{module}/hooks/` — data fetching patterns per domain
-- `src/key/{module}/api/` — direct API call implementations
-- `src/app/api/auth/[...nextauth]/route.ts` — auth flow reference
+**Key areas to examine in the frontend:**
+- API route enums — all 170+ API route patterns
+- API client configuration
+- Per-module hooks — data fetching patterns per domain
+- Per-module API call implementations
+- Auth flow implementation (e.g., NextAuth route handlers)
 
 ### 2.3 Existing Documentation (Tertiary Source)
 
-Check `../public-skills/skills/` for already-documented flows. Don't duplicate — reference and extend.
+Check the existing skill documentation for already-documented flows. Don't duplicate — reference and extend.
 
 ---
 
@@ -97,7 +97,7 @@ Before writing any documentation, follow this sequence:
 ```
 Step 1: Scope
   └─ User tells you which flow/domain to document
-  └─ Check if it already exists in ../public-skills/skills/
+  └─ Check if it already exists in the existing skill documentation
   └─ Identify which backend service(s) are involved
 
 Step 2: Backend Deep Dive
@@ -365,7 +365,7 @@ Every endpoint example MUST include two payload versions:
 - Do NOT translate or paraphrase W3Block-specific identifiers
 
 ### File & Folder Structure
-Each module gets its own subfolder mirroring `src/key/` organization:
+Each module gets its own subfolder mirroring the frontend module organization:
 
 ```
 skills/offpix/
@@ -420,20 +420,20 @@ Before marking a document as complete, verify:
 
 Reference for which domains can be documented and their source mapping:
 
-| Domain | Backend Repo | Swagger | Frontend Module | Key Entities |
-|--------|-------------|---------|-----------------|-------------|
-| **Auth & Identity** | pixwayid-backend | pixwayid.w3block.io/docs/ | `src/key/auth` | Users, Tenants, Sessions, Roles |
-| **Commerce** | commerce-backend | commerce.w3block.io/docs | `src/key/commerce` | Products, Orders, Prices, Discounts, Payments |
-| **Tokens & NFTs** | pixway-registry-backend | api.w3block.io/docs/ | `src/key/tokens` | Contracts, Collections, Editions, Wallets |
-| **Tokenization** | pixway-registry-backend | api.w3block.io/docs/ | `src/key/tokenization` | Dynamic tokenization flows |
-| **Pass & Benefits** | pass-backend | pass.w3block.io/docs | `src/key/pass` | TokenPasses, Benefits, Operators, Addresses |
-| **Loyalty** | pixway-registry-backend | api.w3block.io/docs/ | `src/key/loyalty` | Loyalty contracts, ERC20 transactions |
-| **Contacts** | pixwayid-backend | pixwayid.w3block.io/docs/ | `src/key/contacts` | Contacts, Users, Imports |
-| **KYC** | pixwayid-backend | pixwayid.w3block.io/docs/ | `src/key/kyc` | KYC documents, verification |
-| **PDF** | w3block-pdf | pdf.w3block.io/docs | N/A | PDF templates, generation (internal only — not exposed to end users, but useful for insights into document generation logic) |
-| **Settings & Billing** | pixwayid-backend | pixwayid.w3block.io/docs/ | `src/key/settings` | Plans, Balance, Billing, Emails |
-| **Whitelist** | pixway-registry-backend | api.w3block.io/docs/ | `src/key/whitelist` | Whitelist entries |
-| **Configuration** | pixwayid-backend | pixwayid.w3block.io/docs/ | `src/key/configurations` | Tenant contexts, Menu config |
+| Domain | Backend Service | Swagger | Key Entities |
+|--------|----------------|---------|-------------|
+| **Auth & Identity** | ID Service | pixwayid.w3block.io/docs/ | Users, Tenants, Sessions, Roles |
+| **Commerce** | Commerce Service | commerce.w3block.io/docs | Products, Orders, Prices, Discounts, Payments |
+| **Tokens & NFTs** | Registry Service | api.w3block.io/docs/ | Contracts, Collections, Editions, Wallets |
+| **Tokenization** | Registry Service | api.w3block.io/docs/ | Dynamic tokenization flows |
+| **Pass & Benefits** | Pass Service | pass.w3block.io/docs | TokenPasses, Benefits, Operators, Addresses |
+| **Loyalty** | Registry Service | api.w3block.io/docs/ | Loyalty contracts, ERC20 transactions |
+| **Contacts** | ID Service | pixwayid.w3block.io/docs/ | Contacts, Users, Imports |
+| **KYC** | ID Service | pixwayid.w3block.io/docs/ | KYC documents, verification |
+| **PDF** | PDF Service | pdf.w3block.io/docs | PDF templates, generation (internal only) |
+| **Settings & Billing** | ID Service | pixwayid.w3block.io/docs/ | Plans, Balance, Billing, Emails |
+| **Whitelist** | Registry Service | api.w3block.io/docs/ | Whitelist entries |
+| **Configuration** | ID Service | pixwayid.w3block.io/docs/ | Tenant contexts, Menu config |
 
 ---
 
@@ -454,8 +454,8 @@ When the user requests documentation for a flow:
 > "Document the token collection creation flow"
 
 **Your response:**
-1. Domain: Tokens & NFTs → `pixway-registry-backend` + `api.w3block.io/docs/`
-2. Read `src/modules/` in the backend for collection entities, services, DTOs
-3. Trace `src/key/tokens/hooks/` in the frontend for call sequence
+1. Domain: Tokens & NFTs → Registry Service + `api.w3block.io/docs/`
+2. Review the backend module for collection entities, services, DTOs
+3. Trace the frontend token hooks for call sequence
 4. Write `FLOW_OFFPIX_TOKENS_CREATE_COLLECTION.md`
 5. Update `OFFPIX_SKILL_INDEX.md`

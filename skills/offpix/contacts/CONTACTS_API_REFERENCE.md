@@ -28,7 +28,7 @@ Complete endpoint reference for the W3Block Contacts module. This module covers 
 | Production | PixwayID (users, KYC) | `https://pixwayid.w3block.io` |
 | Production | Registry (royalty, external contacts) | `https://api.w3block.io` |
 | Production | Commerce (payment providers) | `https://commerce.w3block.io` |
-| Staging | PixwayID | `https://pixwayid.stg.w3block.io` |
+| Staging | PixwayID | *(staging environment available — use staging base URL)* |
 | Swagger | PixwayID | https://pixwayid.w3block.io/docs/ |
 | Swagger | Registry | https://api.w3block.io/docs/ |
 

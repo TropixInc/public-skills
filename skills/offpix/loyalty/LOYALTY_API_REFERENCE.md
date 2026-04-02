@@ -26,7 +26,7 @@ Complete endpoint reference for the W3Block Loyalty module. This module spans fo
 | Environment | URL |
 |-------------|-----|
 | Production | `https://api.w3block.io` |
-| Staging | `https://api.stg.w3block.io` |
+| Staging | *(staging environment available — use staging base URL)* |
 | Swagger | https://api.w3block.io/docs/ |
 
 ## Authentication

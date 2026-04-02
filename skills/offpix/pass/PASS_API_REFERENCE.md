@@ -27,7 +27,7 @@ Complete endpoint reference for the W3Block Pass & Benefits module. Covers token
 | Environment | URL |
 |-------------|-----|
 | Production | `https://pass.w3block.io` |
-| Staging | `https://pass.stg.w3block.io` |
+| Staging | *Available — use the staging subdomain variant* |
 | Swagger | https://pass.w3block.io/docs |
 
 ## Authentication

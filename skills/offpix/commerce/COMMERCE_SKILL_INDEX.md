@@ -19,7 +19,7 @@ depends_on:
 
 The Commerce module powers the W3Block e-commerce engine: products (NFTs, ERC20, external), multi-currency orders, multi-provider payments, promotions/coupons, revenue splits, tags, refunds, and sales reporting.
 
-**Backend Service:** `commerce-backend`
+**Backend Service:** Commerce Service
 **Swagger:** https://commerce.w3block.io/docs
 **Base URL:** `https://commerce.w3block.io`
 

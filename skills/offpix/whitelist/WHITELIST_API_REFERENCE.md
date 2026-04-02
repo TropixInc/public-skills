@@ -27,7 +27,7 @@ Complete endpoint reference for the W3Block Whitelist module. This module manage
 | Environment | URL |
 |-------------|-----|
 | Production | `https://pixwayid.w3block.io` |
-| Staging | `https://pixwayid.stg.w3block.io` |
+| Staging | *Available — use the staging subdomain variant* |
 | Swagger | https://pixwayid.w3block.io/docs/ |
 
 ## Authentication
