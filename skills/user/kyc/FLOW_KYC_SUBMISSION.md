@@ -20,6 +20,9 @@ depends_on:
 
 # Submissão de Documentos KYC
 
+> **Referência cruzada:** Este documento é o **canônico** para submissão KYC via serviço de KYC dedicado.
+> Para submissão via serviço de Contacts, consulte [FLOW_CONTACTS_KYC_SUBMISSION.md](./FLOW_CONTACTS_KYC_SUBMISSION.md).
+
 ## Visão Geral
 
 Este fluxo cobre como os usuários submetem documentos KYC para verificação. O processo é: buscar a definição do formulário (inputs), coletar dados do usuário, opcionalmente fazer upload de arquivos, submeter documentos e acompanhar a submissão através do pipeline de aprovação. As submissões seguem o ciclo de vida de status: `DRAFT -> CREATED -> APPROVED / DENIED / REQUIRED_REVIEW`.

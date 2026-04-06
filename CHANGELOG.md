@@ -6,6 +6,42 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ---
 
+## [2.1.0] - 2026-04-06
+
+### Novos documentos de referência cross-module
+
+- **`references/AUTH_FLOW_INTEGRATION.md`** — Guia de integração de autenticação sem SDK: obtenção de tokens, headers `Authorization`, refresh token, fluxo OAuth, `tenantId` vs `companyId`, rate limits e armadilhas comuns
+- **`references/COMMON_ERROR_REFERENCE.md`** — Referência unificada de erros: estrutura padrão, códigos HTTP globais, erros específicos por módulo (auth, commerce, contracts, KYC, loyalty, pass), retry com exponential backoff
+- **`references/WEBHOOKS_REFERENCE.md`** — Documentação de webhooks: eventos por módulo (order, KYC, loyalty, pass, contratos), payloads JSON completos, retry policy em 5 níveis, verificação de assinatura HMAC
+
+### Novos documentos de setup
+
+- **`_setup/ARCHITECTURE_OVERVIEW.md`** — Diagrama mermaid da arquitetura de serviços, URLs base por serviço, mapa completo de módulos, tabela de dependências entre módulos e fluxo típico de integração completa
+- **`_setup/GLOSSARY.md`** — Glossário com 35+ termos do ecossistema W3Block: tenant, companyId, edition, collection, context, input, loyalty, pass, benefit, whitelist, slug, webhook e demais termos técnicos
+
+### Skill Indexes faltantes em `user/`
+
+- **`user/auth/AUTH_SKILL_INDEX.md`** — Índice do módulo de autenticação do usuário com referências cruzadas e armadilhas comuns
+- **`user/kyc/KYC_SKILL_INDEX.md`** — Índice do módulo KYC do usuário com nota de canônico vs alternativo
+- **`user/pass/PASS_SKILL_INDEX.md`** — Índice do módulo Pass do usuário com formato do QR Code e armadilhas
+
+### Melhorias em documentos existentes
+
+- **`_setup/SETUP_API_PATTERNS.md`** — Adicionada seção §14 de paginação: query params padrão (`page`, `limit`, `orderBy`, `sortBy`), estrutura `PaginatedResponse<T>`, exemplo com `usePrivateQuery` e filtros comuns
+- **`_setup/SETUP_SKILL_INDEX.md`** — Corrigidos acentos PT-BR, adicionados novos documentos na tabela e tabela de decisão atualizada com links para referências cross-module
+- **`_meta/OFFPIX_SKILL_INDEX.md`** — Adicionada seção "Documentos de Referência Cross-Module" e início rápido atualizado com 5 passos
+
+### Referências cruzadas KYC
+
+- **`admin/kyc/FLOW_KYC_APPROVAL.md`** — Nota identificando este como documento canônico vs contacts
+- **`admin/contacts/FLOW_CONTACTS_KYC_APPROVAL.md`** — Nota de referência cruzada para o canônico
+- **`user/kyc/FLOW_KYC_SUBMISSION.md`** — Nota identificando este como canônico
+- **`user/kyc/FLOW_CONTACTS_KYC_SUBMISSION.md`** — Nota de referência cruzada para o canônico
+
+**Autor:** Fernando (`fernandodevpascoal@gmail.com`)
+
+---
+
 ## [2.0.0] - 2026-04-06
 
 ### Reestruturação completa de pastas

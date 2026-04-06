@@ -20,7 +20,10 @@ depends_on:
   - FLOW_CONFIGURATIONS_INPUT_MANAGEMENT
 ---
 
-# Submissão de Documentos KYC
+# Submissão de Documentos KYC (via Contacts)
+
+> **Referência cruzada:** Este documento cobre submissão KYC via **serviço de Contacts**.
+> Para a submissão via serviço de KYC dedicado (canônico), consulte [FLOW_KYC_SUBMISSION.md](./FLOW_KYC_SUBMISSION.md).
 
 ## Visão Geral
 

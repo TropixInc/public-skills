@@ -178,10 +178,26 @@ authors:
 
 ---
 
+## Documentos de Referência Cross-Module
+
+Documentos que cobrem temas transversais a todos os módulos. **Leia antes de iniciar qualquer integração.**
+
+| # | Documento | Descrição |
+|---|-----------|-----------|
+| 1 | [AUTH_FLOW_INTEGRATION.md](../references/AUTH_FLOW_INTEGRATION.md) | Guia de autenticação sem SDK: tokens, headers, refresh, tenantId vs companyId, rate limits |
+| 2 | [COMMON_ERROR_REFERENCE.md](../references/COMMON_ERROR_REFERENCE.md) | Estrutura de erro padrão, códigos HTTP, erros por módulo, retry policy |
+| 3 | [WEBHOOKS_REFERENCE.md](../references/WEBHOOKS_REFERENCE.md) | Eventos de webhook por módulo, payloads, retry policy, verificação de assinatura |
+| 4 | [ARCHITECTURE_OVERVIEW.md](../_setup/ARCHITECTURE_OVERVIEW.md) | Diagrama de serviços, URLs base, mapa de módulos, dependências |
+| 5 | [GLOSSARY.md](../_setup/GLOSSARY.md) | Definições de termos do ecossistema (tenant, edition, collection, context, etc.) |
+
+---
+
 ## Início Rápido
 
 ```
-1. Autenticar       → Leia auth/AUTH_SKILL_INDEX.md
-2. Escolher o fluxo → Consulte a tabela "Domínios Disponíveis" acima
-3. Implementar      → Siga o SKILL_INDEX do módulo → docs de FLOW → API_REFERENCE
+1. Arquitetura      → Leia _setup/ARCHITECTURE_OVERVIEW.md
+2. Autenticar       → Leia references/AUTH_FLOW_INTEGRATION.md (sem SDK) ou admin/auth/AUTH_SKILL_INDEX.md (com SDK)
+3. Escolher o fluxo → Consulte a tabela "Domínios Disponíveis" acima
+4. Implementar      → Siga o SKILL_INDEX do módulo → docs de FLOW → API_REFERENCE
+5. Erros            → Consulte references/COMMON_ERROR_REFERENCE.md
 ```

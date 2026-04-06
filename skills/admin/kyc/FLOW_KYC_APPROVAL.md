@@ -21,6 +21,9 @@ depends_on:
 
 # Aprovação e Revisão de KYC
 
+> **Referência cruzada:** Este documento é o **canônico** para aprovação KYC via serviço de KYC (`KYC_API_REFERENCE`).
+> Para aprovação via serviço de Contacts, consulte [FLOW_CONTACTS_KYC_APPROVAL.md](../contacts/FLOW_CONTACTS_KYC_APPROVAL.md) — ambos cobrem o mesmo fluxo de aprovação com endpoints ligeiramente diferentes.
+
 ## Visão Geral
 
 Este fluxo cobre o lado do admin/aprovador do KYC: listar submissões pendentes, revisar documentos enviados e tomar ações (aprovar, rejeitar ou solicitar revisão). Os admins acessam isso através do painel em `/dash/contacts/KYC` para a visão em lista e `/dash/contacts/clients/{id}` para revisão individual.

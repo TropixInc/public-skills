@@ -747,3 +747,85 @@ export const useCriarRecurso = () => {
   });
 };
 ```
+
+---
+
+## 14. Paginação — Padrão das APIs W3Block
+
+Todos os endpoints de listagem usam o mesmo padrão de query params e estrutura de resposta.
+
+### 14.1 — Query params de paginação
+
+| Param | Tipo | Padrão | Descrição |
+|-------|------|--------|-----------|
+| `page` | number | `1` | Número da página (começa em 1) |
+| `limit` | number | `10` | Itens por página (máx: 100) |
+| `orderBy` | string | varia | Campo para ordenação (ex: `createdAt`, `name`) |
+| `sortBy` | string | `DESC` | Direção: `ASC` ou `DESC` |
+
+### 14.2 — Estrutura de resposta paginada
+
+```typescript
+interface PaginatedResponse<T> {
+  items: T[];
+  meta: {
+    totalItems: number;
+    itemCount: number;
+    itemsPerPage: number;
+    totalPages: number;
+    currentPage: number;
+  };
+}
+```
+
+### 14.3 — Exemplo de uso com usePrivateQuery
+
+```typescript
+import { usePrivateQuery, useAxios, W3blockAPI, useCompanyConfig } from '@w3block/w3block-ui-sdk';
+
+export const useListarPedidos = (page = 1, limit = 10) => {
+  const axios = useAxios(W3blockAPI.COMMERCE);
+  const { companyId } = useCompanyConfig();
+
+  return usePrivateQuery(
+    ['pedidos', companyId, page, limit],
+    async () => {
+      const { data } = await axios.get(
+        `/companies/${companyId}/orders`,
+        { params: { page, limit, orderBy: 'createdAt', sortBy: 'DESC' } }
+      );
+      return data; // PaginatedResponse<Order>
+    }
+  );
+};
+```
+
+### 14.4 — Exemplo de resposta
+
+```json
+{
+  "items": [
+    { "id": "uuid-order-1", "status": "concluded", ... },
+    { "id": "uuid-order-2", "status": "pending", ... }
+  ],
+  "meta": {
+    "totalItems": 47,
+    "itemCount": 10,
+    "itemsPerPage": 10,
+    "totalPages": 5,
+    "currentPage": 1
+  }
+}
+```
+
+### 14.5 — Filtros comuns
+
+Além da paginação, os endpoints de listagem geralmente aceitam filtros via query params. Os filtros variam por módulo — consulte o API Reference específico. Exemplos comuns:
+
+```
+?status=concluded          → filtrar por status
+?userId=uuid               → filtrar por usuário
+?createdAtFrom=2026-01-01  → filtrar por data de início
+?createdAtTo=2026-12-31    → filtrar por data de fim
+?search=texto              → busca textual
+```
