@@ -6,6 +6,49 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ---
 
+## [2.0.0] - 2026-04-06
+
+### Reestruturação completa de pastas
+
+Reorganização da pasta `skills/` por audiência, substituindo a estrutura flat + `offpix/` aninhada:
+
+- **`user/`** — Documentação voltada ao usuário final (auth, checkout, tokens, pass, kyc)
+- **`admin/`** — Documentação voltada a admins e integradores (13 módulos: auth, commerce, configurations, contacts, contracts, kyc, loyalty, pass, pdf, settings, tokenization, user-profile, whitelist)
+- **`references/`** — API references e documentos compartilhados (user + admin)
+- **`_setup/`** — Bootstrap de projeto e padrões de API
+- **`_meta/`** — Gap analysis e índice legado offpix
+
+### Mudanças principais
+
+- Eliminada a pasta `offpix/` — módulos movidos para `admin/` e `references/`
+- Eliminadas pastas raiz duplicadas (`auth/`, `checkout/`, `pass/`, `tokens/`, `user-profile/`, `setup/`) — movidas para `user/` ou `admin/`
+- Resolvida duplicação de domínio (ex: `pass/` e `offpix/pass/` agora são `user/pass/` e `admin/pass/`)
+- `OFFPIX_DOCUMENTATION_SPEC.md` renomeado para `_setup/DOCUMENTATION_SPEC.md`
+- `OFFPIX_API_GAP_ANALYSIS.md` movido para `_meta/API_GAP_ANALYSIS.md`
+
+### Tradução para PT-BR
+
+- 66 arquivos traduzidos de inglês para português brasileiro
+- Termos técnicos mantidos em inglês (endpoints, HTTP methods, JSON keys, enum values, nomes de produto)
+- Todos os 95 arquivos agora estão em PT-BR
+
+### Novos módulos (via offpix → admin)
+
+- **commerce v1.0.0** — Produtos, pedidos, pagamentos, promoções, splits, gateways
+- **configurations v1.0.0** — Contextos, formulários dinâmicos, signup activation
+- **contacts v1.0.0** — Gestão de usuários, submissão e aprovação KYC
+- **contracts v1.0.0** — Contratos NFT/ERC20, collections, editions, operações de token
+- **kyc v1.0.0** — Configuração, submissão e aprovação de documentos KYC
+- **loyalty v1.0.0** — Programas de fidelidade, rewards, cashback, pagamentos
+- **pdf v1.0.0** — Geração de certificados e passes em PDF
+- **settings v1.0.0** — Faturamento, planos, configuração de tenant
+- **tokenization v1.0.0** — Collections, editions, mint/burn/transfer, bulk import XLSX
+- **whitelist v1.0.0** — Listas de acesso, grupos de usuários
+
+**Autor:** Fernando (`fernandodevpascoal@gmail.com`)
+
+---
+
 ## [1.1.0] - 2026-03-30
 
 ### pass v1.0.0 — Novo módulo
