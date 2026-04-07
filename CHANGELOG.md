@@ -6,6 +6,85 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ---
 
+## [2.1.0] - 2026-04-06
+
+### Novos documentos de referência cross-module
+
+- **`references/AUTH_FLOW_INTEGRATION.md`** — Guia de integração de autenticação sem SDK: obtenção de tokens, headers `Authorization`, refresh token, fluxo OAuth, `tenantId` vs `companyId`, rate limits e armadilhas comuns
+- **`references/COMMON_ERROR_REFERENCE.md`** — Referência unificada de erros: estrutura padrão, códigos HTTP globais, erros específicos por módulo (auth, commerce, contracts, KYC, loyalty, pass), retry com exponential backoff
+- **`references/WEBHOOKS_REFERENCE.md`** — Documentação de webhooks: eventos por módulo (order, KYC, loyalty, pass, contratos), payloads JSON completos, retry policy em 5 níveis, verificação de assinatura HMAC
+
+### Novos documentos de setup
+
+- **`_setup/ARCHITECTURE_OVERVIEW.md`** — Diagrama mermaid da arquitetura de serviços, URLs base por serviço, mapa completo de módulos, tabela de dependências entre módulos e fluxo típico de integração completa
+- **`_setup/GLOSSARY.md`** — Glossário com 35+ termos do ecossistema W3Block: tenant, companyId, edition, collection, context, input, loyalty, pass, benefit, whitelist, slug, webhook e demais termos técnicos
+
+### Skill Indexes faltantes em `user/`
+
+- **`user/auth/AUTH_SKILL_INDEX.md`** — Índice do módulo de autenticação do usuário com referências cruzadas e armadilhas comuns
+- **`user/kyc/KYC_SKILL_INDEX.md`** — Índice do módulo KYC do usuário com nota de canônico vs alternativo
+- **`user/pass/PASS_SKILL_INDEX.md`** — Índice do módulo Pass do usuário com formato do QR Code e armadilhas
+
+### Melhorias em documentos existentes
+
+- **`_setup/SETUP_API_PATTERNS.md`** — Adicionada seção §14 de paginação: query params padrão (`page`, `limit`, `orderBy`, `sortBy`), estrutura `PaginatedResponse<T>`, exemplo com `usePrivateQuery` e filtros comuns
+- **`_setup/SETUP_SKILL_INDEX.md`** — Corrigidos acentos PT-BR, adicionados novos documentos na tabela e tabela de decisão atualizada com links para referências cross-module
+- **`_meta/OFFPIX_SKILL_INDEX.md`** — Adicionada seção "Documentos de Referência Cross-Module" e início rápido atualizado com 5 passos
+
+### Referências cruzadas KYC
+
+- **`admin/kyc/FLOW_KYC_APPROVAL.md`** — Nota identificando este como documento canônico vs contacts
+- **`admin/contacts/FLOW_CONTACTS_KYC_APPROVAL.md`** — Nota de referência cruzada para o canônico
+- **`user/kyc/FLOW_KYC_SUBMISSION.md`** — Nota identificando este como canônico
+- **`user/kyc/FLOW_CONTACTS_KYC_SUBMISSION.md`** — Nota de referência cruzada para o canônico
+
+**Autor:** Fernando (`fernandodevpascoal@gmail.com`)
+
+---
+
+## [2.0.0] - 2026-04-06
+
+### Reestruturação completa de pastas
+
+Reorganização da pasta `skills/` por audiência, substituindo a estrutura flat + `offpix/` aninhada:
+
+- **`user/`** — Documentação voltada ao usuário final (auth, checkout, tokens, pass, kyc)
+- **`admin/`** — Documentação voltada a admins e integradores (13 módulos: auth, commerce, configurations, contacts, contracts, kyc, loyalty, pass, pdf, settings, tokenization, user-profile, whitelist)
+- **`references/`** — API references e documentos compartilhados (user + admin)
+- **`_setup/`** — Bootstrap de projeto e padrões de API
+- **`_meta/`** — Gap analysis e índice legado offpix
+
+### Mudanças principais
+
+- Eliminada a pasta `offpix/` — módulos movidos para `admin/` e `references/`
+- Eliminadas pastas raiz duplicadas (`auth/`, `checkout/`, `pass/`, `tokens/`, `user-profile/`, `setup/`) — movidas para `user/` ou `admin/`
+- Resolvida duplicação de domínio (ex: `pass/` e `offpix/pass/` agora são `user/pass/` e `admin/pass/`)
+- `OFFPIX_DOCUMENTATION_SPEC.md` renomeado para `_setup/DOCUMENTATION_SPEC.md`
+- `OFFPIX_API_GAP_ANALYSIS.md` movido para `_meta/API_GAP_ANALYSIS.md`
+
+### Tradução para PT-BR
+
+- 66 arquivos traduzidos de inglês para português brasileiro
+- Termos técnicos mantidos em inglês (endpoints, HTTP methods, JSON keys, enum values, nomes de produto)
+- Todos os 95 arquivos agora estão em PT-BR
+
+### Novos módulos (via offpix → admin)
+
+- **commerce v1.0.0** — Produtos, pedidos, pagamentos, promoções, splits, gateways
+- **configurations v1.0.0** — Contextos, formulários dinâmicos, signup activation
+- **contacts v1.0.0** — Gestão de usuários, submissão e aprovação KYC
+- **contracts v1.0.0** — Contratos NFT/ERC20, collections, editions, operações de token
+- **kyc v1.0.0** — Configuração, submissão e aprovação de documentos KYC
+- **loyalty v1.0.0** — Programas de fidelidade, rewards, cashback, pagamentos
+- **pdf v1.0.0** — Geração de certificados e passes em PDF
+- **settings v1.0.0** — Faturamento, planos, configuração de tenant
+- **tokenization v1.0.0** — Collections, editions, mint/burn/transfer, bulk import XLSX
+- **whitelist v1.0.0** — Listas de acesso, grupos de usuários
+
+**Autor:** Fernando (`fernandodevpascoal@gmail.com`)
+
+---
+
 ## [1.1.0] - 2026-03-30
 
 ### pass v1.0.0 — Novo módulo
