@@ -6,6 +6,23 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ---
 
+## [1.2.0] - 2026-10-23
+
+### loyalty v1.0.0 — Novo módulo
+
+- Adicionado módulo de fidelidade e recompensas (7 skills)
+  - `FLOW_LOYALTY_BALANCE.md` — Saldo de pontos do usuário e programas de fidelidade da empresa
+  - `FLOW_LOYALTY_PAYMENT.md` — Pré-visualização e pagamento com pontos de fidelidade
+  - `FLOW_LOYALTY_STAKING.md` — Resumo de staking e resgate de pontos travados
+  - `FLOW_LOYALTY_DEFERRED.md` — Recompensas diferidas (cashback agendado) e exportação XLSX
+  - `FLOW_LOYALTY_ADMIN_REPORTS.md` — Relatórios administrativos e por operador do histórico ERC-20
+  - `LOYALTY_API_REFERENCE.md` — Referência completa da API de loyalty
+  - `LOYALTY_SKILL_INDEX.md` — Índice do módulo
+
+**Autor:** Fernando (`fernandodevpascoal@gmail.com`)
+
+---
+
 ## [1.1.0] - 2026-03-30
 
 ### pass v1.0.0 — Novo módulo
